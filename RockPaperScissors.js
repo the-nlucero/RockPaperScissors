@@ -1,7 +1,8 @@
-//Input Function for the "User"
+//This Function will retreive the Users Choice for R,P,S
 const getUserChoice = userInput => 
 {
-//Converts "User input to lowercase"
+  
+//Converts User input to lowercase to accomodate for capitalization variations
 userInput = userInput.toLowerCase();
 
 //Conditional Statement for "User" Input
@@ -44,7 +45,7 @@ const computerNum = Math.floor(Math.random() *3);
 //This function will determine the winner of the game
 const determineWinner = (userChoice, computerChoice) =>
 {
-// Opponents picked the same move
+// Game results in a tie when opponent's pick the same move
   if (userChoice === computerChoice)
   {
     return ('The game is a TIE!');
