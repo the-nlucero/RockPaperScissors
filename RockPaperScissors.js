@@ -44,6 +44,7 @@ const computerNum = Math.floor(Math.random() *3);
 //This function will determine the winner of the game
 const determineWinner = (userChoice, computerChoice) =>
 {
+// Opponents picked the same move
   if (userChoice === computerChoice)
   {
     return ('The game is a TIE!');
@@ -84,10 +85,16 @@ const determineWinner = (userChoice, computerChoice) =>
 
 };
 
+//Execute the Actual Game
 const playGame = () =>
 {
+  //Hard Coded User Choice
   const userChoice = getUserChoice('rock');
+  
+  //Retreive Auto Generated Move for Computer
   const computerChoice = getComputerChoice();
+  
+  //Print Results
   console.log('You threw: ' + userChoice);
   console.log('The computer threw: ' + computerChoice);
   console.log(determineWinner(userChoice, computerChoice));
